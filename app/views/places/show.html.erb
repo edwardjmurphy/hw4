@@ -4,6 +4,10 @@
 <% if @current_user %>
 <h2>My Posts</h2>
 
+<p>
+  <a href="/posts/new?place_id=<%= @place["id"] %>"class="btn btn-success">Add a New Post</a>
+</p>
+
 <% for post in @posts %>
 <div class="col-md-4 col-sm-8">
 
@@ -13,9 +17,6 @@
 </div>
 <% end %>
 </div>
-<p>
-  <a href="/posts/new?place_id=<%= @place["id"] %>"class="btn btn-success">Add a New Post</a>
-</p>
 
 
 <% else %>
