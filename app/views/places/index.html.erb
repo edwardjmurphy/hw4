@@ -3,12 +3,14 @@
 
 <p>
 <div class="mb-3">
-  <a href="/places/new">New place </a>
+  <a href="/posts/new/" class="btn btn-success">Add a New Place </a>
 </p>
 </div>
 
 <ul>
   <% for place in @places %>
-    <li><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
+  <ul class="list-group">
+  <li class="list-group-item list-group-item-primary"> <a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
+</ul>
   <% end %>
 </ul>
